@@ -1,4 +1,4 @@
-local ffmpeg = require("lj-ffmpeg")
+local ffmpeg = require("libraries.ffi.ffmpeg")
 
 audio.AddDecoder("ffmpeg", function(data, path_hint)
 	local ext = path_hint:match(".+%.(.+)")
