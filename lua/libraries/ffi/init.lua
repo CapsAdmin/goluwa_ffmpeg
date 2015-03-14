@@ -576,8 +576,8 @@ do
 		else
 			-- make a dummy file
 			-- ffmpeg doesn't like os.tmpname() names...
-			file_name = os.tmpname()--fs.getcd() .. "\\" .. tostring(("%p"):format(data):gsub("%p", "")) .. "." .. config.file_ext
-			local file = io.open(file_name, "wb")
+			file_name = fs.getcd() .. "\\" .. tostring(("%p"):format(data):gsub("%p", "")) .. "." .. config.file_ext
+			local file = assert(io.open(file_name, "wb"))
 			file:write(data)
 			file:close()
 		end

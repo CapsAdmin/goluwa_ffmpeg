@@ -6,7 +6,7 @@ audio.AddDecoder("ffmpeg", function(data, path_hint)
 	if ext == "wav" and data:sub(1, 4) ~= "RIFF" then
 		ext = "mp3" -- VALVE
 	end
-		
+	
 	local decoder = assert(ffmpeg.Open(data, {audio_only = true, file_ext = ext}))
 	local data = assert(decoder:ReadAll())
 	
