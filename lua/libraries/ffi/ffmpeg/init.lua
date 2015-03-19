@@ -1,10 +1,10 @@
 local ffi_new = ffi.new or ffi.new_dbg_gc
 
-local header = require("libraries.ffi.ffmpeg.header")
+local header = include("header.lua")
 
 ffi.cdef(header)  
 
-local enums = require("libraries.ffi.ffmpeg.enums")
+local enums = include("enums.lua")
 
 header = header:gsub("%s+", " ")
 header = header:gsub(";", "%1\n")

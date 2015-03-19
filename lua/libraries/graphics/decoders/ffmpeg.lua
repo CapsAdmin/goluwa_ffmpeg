@@ -1,4 +1,4 @@
-local ffmpeg = require("libraries.ffi.ffmpeg")
+local ffmpeg = require("ffi.ffmpeg")
 
 render.AddTextureDecoder("ffmpeg", function(data, path_hint)
 	local ext = path_hint:match(".+%.(.+)")

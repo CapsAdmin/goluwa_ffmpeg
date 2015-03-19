@@ -1,4 +1,4 @@
-local ffmpeg = require("libraries.ffi.ffmpeg")
+local ffmpeg = require("ffi.ffmpeg")
 
 local path = R"videos/casiopea.webm"
 local decoder = assert(ffmpeg.Open(path))

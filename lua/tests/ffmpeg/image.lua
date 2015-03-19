@@ -1,4 +1,4 @@
-local ffmpeg = require("libraries.ffi.ffmpeg")
+local ffmpeg = require("ffi.ffmpeg")
 
 local path = R"textures/gui/pac.png"
 local decoder = assert(ffmpeg.Open(path, {video_only = true}))
